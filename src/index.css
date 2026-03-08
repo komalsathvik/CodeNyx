@@ -7,8 +7,9 @@
 @layer base {
   body {
     @apply font-body antialiased;
-    background-color: #000000;
-    color: #A1A1AA;
+    background-color: #030303;
+    color: rgba(234, 229, 217, 0.6);
+    /* Premium base text color (Sand at 60%) */
     overflow-x: hidden;
   }
 
@@ -18,14 +19,16 @@
   h4,
   h5,
   h6 {
-    color: #FFFFFF;
+    color: #EAE5D9;
   }
 }
 
 @layer components {
+
+  /* Ultra-subtle, non-decorational container */
   .card-minimal {
     position: relative;
-    background: #09090A;
+    background: #0A0A0B;
     border: 1px solid rgba(255, 255, 255, 0.04);
     border-radius: 12px;
     padding: 40px;
@@ -34,60 +37,64 @@
   }
 
   .card-minimal:hover {
-    border-color: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.08);
     transform: translateY(-2px);
-    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
   }
 
+  /* Solid premium white button, black text */
   .btn-primary {
-    @apply inline-flex items-center justify-center font-bold tracking-tight transition-all duration-300;
+    @apply inline-flex items-center justify-center font-bold transition-all duration-300;
     font-family: 'DM Sans', sans-serif;
-    background: #FFFFFF;
-    color: #000000;
+    background: #EAE5D9;
+    color: #030303;
     padding: 14px 32px;
     border-radius: 6px;
     font-size: 15px;
   }
 
   .btn-primary:hover {
-    background: #FAFAFA;
-    box-shadow: 0 0 40px rgba(255, 255, 255, 0.15);
+    background: #ffffff;
+    box-shadow: 0 0 40px rgba(234, 229, 217, 0.2);
     transform: translateY(-1px);
   }
 
+  /* Ghost border button */
   .btn-ghost {
-    @apply inline-flex items-center justify-center font-medium tracking-tight transition-all duration-300;
+    @apply inline-flex items-center justify-center transition-all duration-300;
     font-family: 'DM Sans', sans-serif;
     background: transparent;
-    color: #FFFFFF;
+    color: rgba(234, 229, 217, 0.8);
     padding: 14px 32px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 6px;
     font-size: 15px;
   }
 
   .btn-ghost:hover {
-    color: #FFFFFF;
-    border-color: rgba(255, 255, 255, 0.35);
-    background: rgba(255, 255, 255, 0.03);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.25);
   }
 
   .section-padding {
     @apply py-[120px] lg:py-[180px];
+    /* Massive spacing */
   }
 }
 
+/* Specific text treatments */
 .text-gradient-primary {
-  background: radial-gradient(circle at top center, #FFFFFF 0%, #888888 120%);
+  /* Elegant bone-white to rust gradient for the ONE main title */
+  background: linear-gradient(135deg, #FFFFFF 0%, #EAE5D9 40%, #D96130 150%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
+/* Visual textures for cards */
 .bg-grid-pattern {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-  background-size: 24px 24px;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
 }
 
 .bg-dot-pattern {
@@ -95,11 +102,14 @@
   background-size: 20px 20px;
 }
 
+/* Hide scrollbar for tabs */
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
 
 .hide-scrollbar {
   -ms-overflow-style: none;
+  /* IE and Edge */
   scrollbar-width: none;
+  /* Firefox */
 }

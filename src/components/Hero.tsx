@@ -1,90 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+// @ts-ignore
+import ColorBends from './ColorBends';
 
 const WORDS = ["developers", "designers", "innovators", "builders", "creators"];
 const TARGET_DATE = new Date("2026-03-28T10:00:00+05:30");
-
-// The grand geometric visual anchor
-const GeometricCore = () => (
-    <div className="absolute top-[40%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] pointer-events-none flex items-center justify-center opacity-[0.25] -z-10 mix-blend-screen">
-        {/* Large expanding outer rings */}
-        <motion.div
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 2, ease: "easeOut" }}
-            className="absolute w-full h-full rounded-full border border-accent-secondary/10"
-        />
-        <motion.div
-            initial={{ scale: 0.6, rotate: 0 }}
-            animate={{ scale: 1, rotate: 180 }}
-            transition={{ duration: 40, ease: "linear", repeat: Infinity }}
-            className="absolute w-[80%] h-[80%] rounded-full border border-dashed border-accent-primary/20"
-        />
-
-        {/* Inner mechanical core */}
-        <motion.div
-            initial={{ rotate: 180 }}
-            animate={{ rotate: 0 }}
-            transition={{ duration: 60, ease: "linear", repeat: Infinity }}
-            className="absolute w-[60%] h-[60%] rounded-full border-[1px] border-accent-secondary/20 flex items-center justify-center"
-        >
-            <div className="absolute top-[-4px] left-[50%] w-2 h-2 rounded-full bg-accent-secondary shadow-[0_0_10px_#FFFF00]" />
-            <div className="absolute bottom-[-4px] right-[20%] w-1.5 h-1.5 rounded-full bg-accent-primary shadow-[0_0_10px_#FFFFFF]" />
-        </motion.div>
-
-        <motion.div
-            className="absolute w-[40%] h-[40%] rounded-full bg-gradient-to-tr from-accent-secondary/5 to-transparent backdrop-blur-3xl border border-white/5 shadow-[inset_0_0_40px_rgba(255,68,0,0.1)]"
-        />
-    </div>
-);
-
-const TypewriterTitle = () => {
-    const text = "CodeNyx";
-    const [displayedText, setDisplayedText] = useState("");
-    const [isDeleting, setIsDeleting] = useState(false);
-
-    useEffect(() => {
-        let timeout: ReturnType<typeof setTimeout>;
-
-        const typeSpeed = 200;
-        const deleteSpeed = 150;
-        const pauseDelay = 3000;
-
-        const handleTyping = () => {
-            if (!isDeleting) {
-                if (displayedText.length < text.length) {
-                    setDisplayedText(text.substring(0, displayedText.length + 1));
-                } else {
-                    timeout = setTimeout(() => setIsDeleting(true), pauseDelay);
-                    return;
-                }
-            } else {
-                if (displayedText.length > 0) {
-                    setDisplayedText(text.substring(0, displayedText.length - 1));
-                } else {
-                    setIsDeleting(false);
-                }
-            }
-        };
-
-        timeout = setTimeout(handleTyping, isDeleting ? deleteSpeed : typeSpeed);
-
-        return () => clearTimeout(timeout);
-    }, [displayedText, isDeleting]);
-
-    return (
-        <span className="flex items-center justify-center relative min-h-[1em] min-w-[5ch]">
-            <span className="text-gradient-primary">{displayedText}</span>
-            <motion.span
-                animate={{ opacity: (displayedText === text && !isDeleting) ? 0 : [1, 0, 1] }}
-                transition={{ duration: (displayedText === text && !isDeleting) ? 0.3 : 1, repeat: (displayedText === text && !isDeleting) ? 0 : Infinity, ease: "linear" }}
-                className="text-white/80 font-light ml-[0.2em] translate-y-[-0.08em]"
-            >
-                |
-            </motion.span>
-        </span>
-    );
-};
 
 const Hero = () => {
     const [wordIndex, setWordIndex] = useState(0);
@@ -129,16 +49,28 @@ const Hero = () => {
     return (
         <section id="home" className="relative min-h-screen flex flex-col items-center justify-center pt-[140px] pb-[80px] overflow-hidden px-6">
 
-            {/* Motivated glow from the core */}
-            <div className="absolute top-[30%] left-1/2 -translate-x-1/2 w-[70vw] h-[70vh] -z-20 pointer-events-none opacity-[0.5] mix-blend-screen bg-glow-hero blur-[120px]" />
-
-            <GeometricCore />
+            {/* ColorBends WebGL Background */}
+            <div className="absolute inset-0 z-0" style={{ filter: 'brightness(0.6) contrast(1.2)' }}>
+                <ColorBends
+                    colors={[]}
+                    rotation={0}
+                    speed={0.2}
+                    scale={1}
+                    frequency={1}
+                    warpStrength={1}
+                    mouseInfluence={1}
+                    parallax={0.5}
+                    noise={0.1}
+                    transparent={false}
+                    autoRotate={0}
+                />
+            </div>
 
             <motion.div
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
-                className="max-w-[1200px] w-full flex flex-col items-center text-center z-10"
+                className="max-w-[1200px] w-full flex flex-col items-center text-center z-10 relative pointer-events-none"
             >
                 <motion.p variants={itemVariants} className="font-mono text-[13px] text-accent-secondary font-bold uppercase tracking-[4px] mb-[40px] opacity-80">
                     CodeNyx &mdash; March 2026
@@ -147,12 +79,12 @@ const Hero = () => {
                 {/* Title - Massive */}
                 <motion.h1
                     variants={itemVariants}
-                    className="font-display font-black text-[clamp(72px,16vw,180px)] tracking-[-0.05em] leading-[0.85] pb-4 w-full flex items-center justify-center"
+                    className="font-display font-black text-[clamp(72px,16vw,180px)] tracking-[-0.05em] leading-[0.85] pb-4 text-gradient-primary w-full"
                 >
-                    <TypewriterTitle />
+                    CodeNyx
                 </motion.h1>
 
-                {/* Subtitle - Pure White */}
+                {/* Subtitle */}
                 <motion.div variants={itemVariants} className="flex flex-col items-center mt-[32px] mb-[56px]">
                     <h2 className="font-display font-black text-[clamp(28px,4vw,44px)] text-accent-primary tracking-[-0.03em] leading-[1.2]">
                         The 36-hour hackathon
@@ -182,8 +114,8 @@ const Hero = () => {
                     Join builders and innovators for an intense hackathon where real-world problems meet creative technology at CVR College of Engineering.
                 </motion.p>
 
-                {/* CTA Row - White Button */}
-                <motion.div variants={itemVariants} className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-[120px]">
+                {/* CTA Row */}
+                <motion.div variants={itemVariants} className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-[120px] pointer-events-auto">
                     <button className="btn-primary w-full sm:w-auto">
                         Register Now
                     </button>
@@ -192,7 +124,7 @@ const Hero = () => {
                     </a>
                 </motion.div>
 
-                {/* Countdown - Pure typography on black */}
+                {/* Countdown */}
                 <motion.div variants={itemVariants} className="flex justify-center items-baseline gap-6 md:gap-12 select-none w-full border-t border-accent-secondary/10 pt-[60px]">
                     {isPast ? (
                         <div className="flex items-center gap-4 font-mono text-accent-secondary font-bold tracking-widest text-[16px]">
