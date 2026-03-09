@@ -202,8 +202,6 @@ const Footer = () => {
                             GDG CVR On Campus
                         </a>
                     </div>
-
-                    </div>
                 </div>
 
             </div>
