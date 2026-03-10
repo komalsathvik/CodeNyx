@@ -179,7 +179,7 @@ const Hero = () => {
           variants={itemVariants}
           className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-[120px] pointer-events-auto"
         >
-          <a href="https://hackculture.io/hackathons/codenyx?preview=true" target="_blank" rel="noopener noreferrer" className="btn-primary w-full sm:w-auto text-center flex justify-center items-center">
+          <a href="https://hackculture.io/hackathons/codenyx" target="_blank" rel="noopener noreferrer" className="btn-primary w-full sm:w-auto text-center flex justify-center items-center">
             Register for DSA Round
           </a>
 

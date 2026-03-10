@@ -61,7 +61,7 @@ const CTA = () => {
                         </p>
 
                         <div className="flex flex-col sm:flex-row w-full sm:w-auto justify-center items-center gap-[16px] mb-[64px]">
-                            <a href="https://hackculture.io/hackathons/codenyx?preview=true" target="_blank" rel="noopener noreferrer" className="btn-primary w-full sm:w-auto h-[64px] px-[48px] text-[18px] text-center flex items-center justify-center">
+                            <a href="https://hackculture.io/hackathons/codenyx" target="_blank" rel="noopener noreferrer" className="btn-primary w-full sm:w-auto h-[64px] px-[48px] text-[18px] text-center flex items-center justify-center">
                                 Register for DSA Round
                             </a>
                         </div>
