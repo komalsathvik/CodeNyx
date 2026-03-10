@@ -11,6 +11,7 @@ import FAQ from './components/FAQ';
 import PacmanCodenyx from './components/pacman/PacmanCodenyx';
 import Footer from './components/Footer';
 import useSmoothScroll from './hooks/useSmoothScroll';
+import { Analytics } from "@vercel/analytics/next"
 
 function App() {
   useSmoothScroll();
@@ -30,6 +31,7 @@ function App() {
         <PacmanCodenyx />
       </main>
       <Footer />
+      <Analytics />
     </div>
   );
 }
