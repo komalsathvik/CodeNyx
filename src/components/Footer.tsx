@@ -67,8 +67,6 @@ const Footer = () => {
                 {/* Main Footer Content */}
                 <div className="pt-[80px] pb-[60px]">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-[60px] lg:gap-[40px]">
-
-                        {/* Brand Column — spans 5 cols */}
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -87,7 +85,7 @@ const Footer = () => {
                             </div>
 
                             <p className="font-body text-[15px] text-white/35 leading-[1.85] mb-[36px] max-w-[380px]">
-                                The flagship hackathon by GDG CVR On Campus — from online DSA
+                                The flagship hackathon by GDG on Campus CVR College of Engineering - from online DSA
                                 screening to PPT evaluation to a 36-hour offline building sprint
                                 at CVR College of Engineering.
                             </p>
@@ -112,8 +110,6 @@ const Footer = () => {
                                 ))}
                             </div>
                         </motion.div>
-
-                        {/* Navigation Column — spans 3 cols */}
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -137,8 +133,6 @@ const Footer = () => {
                                 ))}
                             </div>
                         </motion.div>
-
-                        {/* Info Column — spans 4 cols */}
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -190,7 +184,7 @@ const Footer = () => {
                     <div className="flex flex-col md:flex-row justify-between items-center py-[32px] gap-[16px]">
 
                         <p className="font-mono text-[11px] text-white/15 tracking-[2px] uppercase">
-                            © {currentYear} CodeNyx — All Rights Reserved
+                            © {currentYear} CodeNyx - All Rights Reserved
                         </p>
 
                         <a

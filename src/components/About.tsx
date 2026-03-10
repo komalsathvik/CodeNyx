@@ -44,7 +44,7 @@ const About = () => {
                         </h2>
 
                         <p className="font-body text-[18px] text-[rgba(255,255,255,0.5)] leading-[1.8] mb-[48px]">
-                            CodeNyx is the flagship hackathon organized by GDG CVR On Campus at
+                            CodeNyx is the flagship hackathon organized by GDG on Campus CVR College of Engineering at
                             CVR College of Engineering. The journey begins with an online DSA
                             screening round where participants demonstrate their problem-solving
                             skills. Shortlisted candidates proceed to the PPT submission stage

@@ -168,7 +168,7 @@ const Hero = () => {
           className="font-body text-[18px] text-accent-primary/50 max-w-[620px] leading-[1.7] mb-[80px]"
         >
           CodeNyx is the flagship hackathon organized by{" "}
-          <strong>Google Developer Group (GDG) CVR On Campus</strong>. It brings
+          <strong>Google Developer Group (GDG) on Campus CVR College of Engineering</strong>. It brings
           together developers, designers, and innovators for an intense 36-hour
           build sprint where technology meets real-world challenges at CVR
           College of Engineering.

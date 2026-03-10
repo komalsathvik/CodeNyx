@@ -5,7 +5,7 @@ import { ChevronDown } from 'lucide-react';
 const faqs = [
     {
         question: "What is CodeNyx?",
-        answer: "CodeNyx is a 36-hour offline hackathon organized by GDG CVR On Campus where participants build innovative solutions to real-world problems, collaborate with fellow developers, and present their ideas to industry mentors and judges."
+        answer: "CodeNyx is a 36-hour offline hackathon organized by GDG on Campus CVR College of Engineering where participants build innovative solutions to real-world problems, collaborate with fellow developers, and present their ideas to industry mentors and judges."
     },
     {
         question: "Who can participate?",
