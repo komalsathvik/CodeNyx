@@ -109,7 +109,7 @@ const Hero = () => {
           variants={itemVariants}
           className="font-mono text-[13px] text-accent-secondary font-bold uppercase tracking-[4px] mb-[40px] hover:text-white transition-colors cursor-pointer pointer-events-auto"
         >
-          GDG CVR On Campus
+          on Campus CVR
         </motion.a>
 
         {/* Main Title */}
