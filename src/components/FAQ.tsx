@@ -9,23 +9,24 @@ const faqs = [
     },
     {
         question: "Who can participate?",
-        answer: "Any undergraduate student from a recognized college or university can participate. All participants must register individually through the official website."
+        answer: "Any undergraduate student from any college or university across India can participate. All participants must register individually through the official website."
     },
     {
         question: "Can I participate individually?",
-        answer: "Yes. Participants must register individually for the initial screening and PPT round. Teams will be formed randomly by the organizers after the shortlisting process."
+        answer: "Yes. Participants must register individually for the initial screening and PPT round. Teams will be formed by the organizers after the shortlisting process."
     },
     {
         question: "How are teams formed?",
-        answer: "After the PPT round and shortlisting process, the organizers will randomly form teams to ensure diverse skill sets and encourage collaboration among participants."
+        answer: "After the PPT round and shortlisting process, the organizers will form teams to ensure diverse skill sets and encourage collaboration among participants from various colleges."
     },
     {
+        
         question: "Is there a registration fee?",
-        answer: "The initial DSA screening round is free for all participants. Shortlisted participants who advance to the final offline hackathon may be required to pay a nominal participation fee."
+        answer: "The initial DSA screening round is free for all participants. Shortlisted participants who advance to the final offline hackathon may be required to pay a nominal participation fee of ₹350."
     },
     {
         question: "What is the selection process?",
-        answer: "Participants first register individually and complete the online DSA screening round. Shortlisted candidates then submit a PPT based on the problem statements. Final participants are selected and grouped into teams for the offline hackathon."
+        answer: "Participants first register individually and complete the online DSA screening round. Shortlisted candidates then submit a PPT based on the problem statements provided. Final participants are selected and grouped into teams for the offline hackathon."
     },
     {
         question: "Do I need prior hackathon experience?",
@@ -34,8 +35,41 @@ const faqs = [
     {
         question: "What should participants bring?",
         answer: "Participants should bring their laptops, chargers, and any hardware or tools required for building their project during the hackathon."
+    },
+    {
+        question: "Will food and accommodation be provided?",
+        answer: "Food will be provided throughout the event. While formal accommodation is not provided, we will have designated resting areas with mattresses for participants who want to take a quick nap and recharge."
+    },
+    {
+        question: "Can I leave the campus during the hackathon?",
+        answer: "No, participants are strictly not allowed to leave the campus during the 36-hour hackathon. Leaving the premises will result in immediate disqualification."
+    },
+    {
+        question: "Will Wi-Fi be provided?",
+        answer: "Yes, reliable Wi-Fi will be provided for all participants throughout the duration of the hackathon."
+    },
+    {
+        question: "What are the themes or problem statements?",
+        answer: "Problem statements will be provided by reputed companies based on real-world challenges. You will be evaluated by a jury from these companies, offering excellent industry exposure."
+    },
+    {
+        question: "Will there be mentors to guide us?",
+        answer: "Absolutely! Industry experts, corporate professionals, and senior developers from the CVR Alumni network will be available on-site to mentor and guide you while you build."
+    },
+    {
+        question: "What is the judging criteria?",
+        answer: "Projects will be evaluated based on five main pillars: innovation and creativity, technical implementation, design and usability, real-world impact, and the quality of your final presentation."
+    },
+    {
+        question: "What are the prizes for the winning teams?",
+        answer: "There are 3 specific tracks, and the winning team for each problem statement will receive a cash prize of ₹10,000! Additionally, there will be cool prizes and platform credits provided by our sponsors."
+    },
+    {
+        question: "Will I receive a certificate?",
+        answer: "Yes! All attendees who complete the hackathon will receive a Certificate of Participation. The winning teams will also be awarded a special Certificate of Excellence."
     }
 ];
+
 const FAQItem = ({ faq, isOpen, toggleOpen, index }: { faq: any, isOpen: boolean, toggleOpen: () => void, index: number }) => {
     return (
         <div className="relative border-b border-accent-secondary/10 py-[40px] group overflow-hidden">
