@@ -19,7 +19,7 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 function App() {
   useSmoothScroll();
 
-  if (window.location.pathname === '/cvr-p1') {
+  if (window.location.pathname === "/cvr-p1") {
     return <TestRedirect />;
   }
 

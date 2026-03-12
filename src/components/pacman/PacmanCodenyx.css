@@ -9,9 +9,10 @@
   box-sizing: border-box;
 }
 
-/* Scanline */
-.pacman-scanline {
-  position: fixed;
+/* Scanline — ::after so it never escapes the wrapper */
+.pacman-wrapper::after {
+  content: "";
+  position: absolute;
   inset: 0;
   background: repeating-linear-gradient(
     0deg,

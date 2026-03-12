@@ -503,25 +503,16 @@ export default function PacmanCodenyx({
       id={id}
       ref={wrapperRef}
       className={[
-        "relative flex flex-col items-center justify-center w-full min-h-[300px] py-[60px] bg-black overflow-hidden font-mono",
+        "relative flex flex-col items-center justify-center w-full h-screen bg-black overflow-hidden font-mono",
         className,
       ]
         .filter(Boolean)
         .join(" ")}
       style={style}
-      role="img"
-      aria-label="Interactive Pac-Man animation spelling CodeNyx"
       {...rest}
     >
-      {/* scanline — CSS only */}
-      <div className="pacman-scanline" aria-hidden="true" />
-
       {/* stage */}
-      <div
-        className="stage relative w-full"
-        ref={stageRef}
-        aria-hidden="true"
-      />
+      <div className="stage relative w-full" ref={stageRef} />
     </div>
   );
 }
