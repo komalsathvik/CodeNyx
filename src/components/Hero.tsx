@@ -108,7 +108,7 @@ const Hero = () => {
         </motion.p>
 
         <motion.a
-          href="https://gdgcvrwebsite.vercel.app/"
+          href="https://gdg.cvr.ac.in/"
           target="_blank"
           rel="noopener noreferrer"
           variants={itemVariants}
