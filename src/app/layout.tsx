@@ -1,4 +1,9 @@
 import "@/app/index.css";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import SmoothScrollProvider from "@/components/providers/SmoothScrollProvider";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function RootLayout({
   children,
@@ -12,7 +17,15 @@ export default function RootLayout({
         <title>CodeNyx | 36-Hour Hackathon</title>
       </head>
       <body>
-        <div id="root">{children}</div>
+        <SmoothScrollProvider>
+          <div className="bg-black min-h-screen text-white font-body selection:bg-white selection:text-black">
+            <Navbar />
+            <div id="root">{children}</div>
+            <Footer />
+            <Analytics />
+            <SpeedInsights />
+          </div>
+        </SmoothScrollProvider>
       </body>
     </html>
   );

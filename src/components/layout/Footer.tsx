@@ -6,10 +6,10 @@ const Footer = () => {
   const currentYear = 2026;
 
   const navLinks = [
-    { label: "Home", href: "#home" },
-    { label: "Highlights", href: "#highlights" },
-    { label: "Timeline", href: "#timeline" },
-    { label: "FAQs", href: "#faqs" },
+    { label: "Home", href: "/#home" },
+    { label: "Highlights", href: "/#highlights" },
+    { label: "Timeline", href: "/#timeline" },
+    { label: "FAQs", href: "/#faqs" },
   ];
 
   const socialLinks = [
