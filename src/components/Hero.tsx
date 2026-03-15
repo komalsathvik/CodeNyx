@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import ColorBends from "./ColorBends";
 
 const WORDS = ["developers", "designers", "innovators", "builders", "creators"];
-const TARGET_DATE = new Date("2026-03-28T10:00:00+05:30");
+const TARGET_DATE = new Date("2026-03-30T10:00:00+05:30");
 
 const Hero = () => {
   const [wordIndex, setWordIndex] = useState(0);
