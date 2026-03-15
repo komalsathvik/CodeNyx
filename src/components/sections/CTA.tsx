@@ -81,7 +81,7 @@ const CTA = () => {
               </a>
             </div>
             <p className="font-mono text-[13px] text-accent-primary/30 tracking-[3px] uppercase">
-              DSA Round: March 17, 2026 // 8:00 PM – 10:00 PM IST
+              DSA Round: March 20, 2026 // 8:00 PM – 10:00 PM IST
             </p>
           </div>
         </motion.div>

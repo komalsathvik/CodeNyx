@@ -74,7 +74,7 @@ const About = () => {
               demonstrate their problem-solving skills. Shortlisted candidates
               proceed to the PPT submission stage where they present their
               ideas. Selected participants are then grouped into teams and
-              invited to the 36-hour offline hackathon held on March 28–29,
+              invited to the 36-hour offline hackathon held on March 30–31,
               where they collaborate, build innovative solutions, and present
               their projects to mentors and judges.
             </p>
@@ -147,7 +147,7 @@ const About = () => {
 
             {/* Stats */}
             <StatsCard title="Hackathon Duration" metric="36 Hrs" delay={0.2} />
-            <StatsCard title="Hackathon Dates" metric="Mar 28–29" delay={0.3} />
+            <StatsCard title="Hackathon Dates" metric="Mar 30–31" delay={0.3} />
             <StatsCard
               title="Initial Screening"
               metric="DSA Round"

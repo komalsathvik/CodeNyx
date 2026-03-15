@@ -17,12 +17,12 @@ const timelineData: Record<
 > = {
   "PRE-EVENT": [
     {
-      time: "MAR 10 - 17",
+      time: "MARCH 10 - 20 (7 PM IST)",
       title: "Registrations Open",
       subtitle: "Portal unlocks. Apply now.",
     },
     {
-      time: "MARCH 17",
+      time: "MARCH 20 (8 PM - 10 PM IST)",
       title: "DSA Screening Round",
       subtitle:
         "Algorithmic filtering phase. (Coding rounds differ for CVR and BVRIT. Exact dates will be informed in their college)",
@@ -30,17 +30,17 @@ const timelineData: Record<
       dateNote: "CVR: 12TH",
     },
     {
-      time: "MAR 18 - 22",
+      time: "MARCH 21 - 26",
       title: "Idea Presentation",
       subtitle: "Eligible Members present abstract wireframes.",
     },
     {
-      time: "MARCH 23",
+      time: "MARCH 22 - 27",
       title: "Payment Deadline",
       subtitle: "Operational fee processing.",
     },
     {
-      time: "MAR 28 - 29",
+      time: "MARCH 30 - 31",
       title: "Final Hackathon",
       subtitle: "The ultimate 36-hour offline building sprint.",
     },
